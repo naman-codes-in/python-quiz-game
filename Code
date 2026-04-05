@@ -1,0 +1,28 @@
+class Quiz:
+    questions = [
+        ("Question", "Answer"),
+        ("Question", "Answer"),
+        ("Question", "Answer"),
+        ("Question", "Answer"),
+        ("Question", "Answer")
+    ]
+
+    def start(self):
+        score = 0
+        for item in self.questions:
+            question = item[0]
+            answer = item[1]
+
+            print(question)
+            attempt = input("What is your answer: ")
+
+            if answer.lower().strip() == attempt.lower().strip():
+                print("Right answer")
+                score = score + 1
+
+            else:
+                print("Wrong Answer! Right Answer is:", answer)
+        print(f"Your Total Score Is: {score}/5")
+
+q1 = Quiz()
+q1.start()
